@@ -1,0 +1,12 @@
+# Ignorar la carpeta .git (el propio repositorio)
+.git/
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar dependencias de Node.js si las tienes
+node_modules/
+
+# Ignorar cualquier archivo temporal que pueda generar tu editor
+*.swp
+*.bak
