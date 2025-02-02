@@ -4,48 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mi Página Web</title>
-    <!-- Puedes agregar un archivo CSS externo aquí si lo necesitas -->
+    <title>LEGO Colecciones Exclusivas</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
+            color: #333;
         }
+        
+        /* Header */
         header {
-            background-color: #333;
+            background-color: #004d99;
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #0056b3;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Main Content */
         .content {
             margin: 20px;
         }
+
+        .content h2 {
+            font-size: 30px;
+            color: #004d99;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #004d99;
+        }
+
+        .product-card .info {
+            padding: 15px;
+        }
+
+        .product-card .info h3 {
+            font-size: 20px;
+            margin: 0;
+            color: #333;
+        }
+
+        .product-card .info p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .product-card .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #333;
             color: white;
-            position: absolute;
+            position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .products {
+                grid-template-columns: 1fr 1fr;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Bienvenido a mi Página Web</h1>
+        <h1>LEGO Colecciones Exclusivas</h1>
     </header>
 
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Colecciones</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contactar</a>
+    </nav>
+
+    <!-- Main Content -->
     <div class="content">
-        <h2>Sobre mí</h2>
-        <p>¡Hola! Soy un desarrollador web en proceso de aprendizaje. Esta es una página básica de ejemplo.</p>
-        <p>Si quieres saber más sobre desarrollo web, puedes visitar <a href="https://www.w3schools.com" target="_blank">W3Schools</a> para más recursos.</p>
+        <h2>Colecciones Limitadas de LEGO</h2>
+
+        <div class="products">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300?text=LEGO+Set+1" alt="LEGO Set 1">
+                <div class="info">
+                    <h3>LEGO Star Wars - X-Wing Fighter</h3>
+                    <p>Un modelo detallado de la famosa nave de Star Wars, edición limitada.</p>
+                    <div class="price">€199.99</div>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300?text=LEGO+Set+2" alt="LEGO Set 2">
+                <div class="info">
+                    <h3>LEGO Creator - Ferrari F40</h3>
+                    <p>Un modelo espectacular del Ferrari F40, ideal para los coleccionistas.</p>
+                    <div class="price">€149.99</div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300?text=LEGO+Set+3" alt="LEGO Set 3">
+                <div class="info">
+                    <h3>LEGO Technic - Bugatti Chiron</h3>
+                    <p>Una obra maestra de LEGO, perfecto para los fanáticos de los autos deportivos.</p>
+                    <div class="price">€299.99</div>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300?text=LEGO+Set+4" alt="LEGO Set 4">
+                <div class="info">
+                    <h3>LEGO Ninjago - Dragon del Fuego</h3>
+                    <p>Un set espectacular para los fanáticos de Ninjago, muy detallado y coleccionable.</p>
+                    <div class="price">€129.99</div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+        <p>&copy; 2025 LEGO Colecciones Exclusivas. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
+
